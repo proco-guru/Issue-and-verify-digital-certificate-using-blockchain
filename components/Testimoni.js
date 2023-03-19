@@ -10,41 +10,41 @@ import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
 const Testimoni = ({
   listTestimoni = [
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
+      name: "Divesh Jadhav",
+      image: "/assets/member1.jpeg",
+      city: "Nashik",
+      country: "India",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "BackEnd Devoloper",
     },
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
+      name: "Ankita Pawar",
+      image: "/assets/member2.jpg",
+      city: "Nashik",
+      country: "India",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "FrontEnd Devoloper",
     },
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
+      name: "Vaishnavi Deore",
+      image: "/assets/member3.jpeg",
+      city: "Nashik",
+      country: "India",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "FrontEnd Devoloper",
     },
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
+      name: "Navnath Ugale",
+      image: "/assets/member4.jpeg",
+      city: "Nashik",
+      country: "India",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
-    },
+          "Software Tester",
+      },
   ],
 }) => {
   const settings = {
@@ -59,7 +59,7 @@ const Testimoni = ({
     dotsClass: "slick-dots w-max absolute mt-20  ",
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 2,
     responsive: [
       {
@@ -91,16 +91,18 @@ const Testimoni = ({
       >
         {listTestimoni.map((listTestimonis, index) => (
           <div className="px-3 flex items-stretch" key={index}>
-            <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col">
-              <div className="flex flex-col xl:flex-row w-full items-stretch xl:items-center">
-                <div className="flex order-2 xl:order-1">
-                  <Image
+            <div className="border-2 border-white-500 transition-all rounded-lg p-8 flex flex-col">
+              
+             <Image className="rounded-full"
                     src={listTestimonis.image}
-                    height={50}
-                    width={50}
+                    height={180}
+                    width={180}
                     alt="Icon People"
                   />
-                  <div className="flex flex-col ml-5 text-left">
+              <div className="flex flex-col xl:flex-row  items-stretch xl:items-center">
+                <div className="flex order-2 xl:order-1">
+                  
+                  <div className="flex flex-col mt-3 ml-10 text-center">
                     <p className="text-lg text-black-600 capitalize">
                       {listTestimonis.name}
                     </p>
@@ -109,14 +111,15 @@ const Testimoni = ({
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-none items-center ml-auto order-1 xl:order-2">
-                  <p className="text-sm">{listTestimonis.rating}</p>
+                
+              </div>
+              <div className="flex flex-none ml-14  items-center  ">
+                  <p className=" text-center text-sm ml-4">{listTestimonis.rating}</p>
                   <span className="flex ml-4">
                     <Stars className="h-4 w-4" />
                   </span>
                 </div>
-              </div>
-              <p className="mt-5 text-left">“{listTestimonis.testimoni}”.</p>
+              <p className="mt-5 text-center">“{listTestimonis.testimoni}”.</p>
             </div>
           </div>
         ))}
@@ -124,13 +127,13 @@ const Testimoni = ({
       <div className="flex w-full items-center justify-end">
         <div className="flex flex-none justify-between w-auto mt-14">
           <div
-            className="mx-4 flex items-center justify-center h-14 w-14 rounded-full bg-white border-orange-500 border hover:bg-orange-500 hover:text-white-500 transition-all text-orange-500 cursor-pointer"
+            className="mx-4 flex items-center justify-center h-14 w-14 rounded-full bg-white text-black-600 border hover:text-black-600  transition-all text-orange-500 cursor-pointer"
             onClick={sliderRef?.slickPrev}
           >
             <ArrowBack className="h-6 w-6 " />
           </div>
           <div
-            className="flex items-center justify-center h-14 w-14 rounded-full bg-white border-orange-500 border hover:bg-orange-500 hover:text-white-500 transition-all text-orange-500 cursor-pointer"
+            className="flex items-center justify-center h-14 w-14 rounded-full bg-whitetext-black-600 border hover:text-black-600 transition-all text-orange-500 cursor-pointer"
             onClick={sliderRef?.slickNext}
           >
             <ArrowNext className="h-6 w-6" />

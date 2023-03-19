@@ -5,10 +5,11 @@ import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
 const features = [
-  "Powerfull online protection.",
-  "Internet without borders.",
-  "Supercharged VPN",
-  "No specific time limits."
+  "Generate certificates that cannot be forged.",
+  "Certificate can also calculate a unique code.",
+  "Registration, Integrity and identity management.",
+  "Provide a tamper-proof and secure mechanism.",
+  "Easy to verify the authenticity of real certificates."
 ]
 
 const Feature = () => {
@@ -21,13 +22,13 @@ const Feature = () => {
     >
       <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8 p  y-8 my-12">
         <ScrollAnimationWrapper className="flex w-full justify-end">
-          <motion.div className="h-full w-full p-4" variants={scrollAnimation}>
+          <motion.div className="h-full w-full p-1" variants={scrollAnimation}>
             <Image
-              src="/assets/Illustration2.png"
+              src="/assets/features.gif"
               alt="VPN Illustrasi"
               layout="responsive"
               quality={100}
-              height={414}
+              height={350}
               width={508}
             />
           </motion.div>
