@@ -3,7 +3,12 @@ import Link from "next/link";
 // Import react scroll
 import { Link as LinkScroll } from "react-scroll";
 import ButtonOutline from "../misc/ButtonOutline.";
-import LogoVPN from "../../public/assets/Logo.svg";
+// import LogoVPN from "../../public/assets/Logo.svg";
+import Image from "next/image";
+import StudentForm from "../Student/StudentForm";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState(null);
@@ -21,30 +26,39 @@ const Header = () => {
           (scrollActive ? " shadow-md pt-0" : " pt-4")
         }
       >
+        {/* <BrowserRouter>
+        <Switch>
+          <Route path="/StudentForm">
+            <StudentForm />
+          </Route>
+          </Switch>
+      </BrowserRouter> */}
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
-            <LogoVPN className="h-8 w-auto" />
+            <Image src="/assets/logo.png" className="w-auto" width={150} height={50}/>
           </div>
           <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
-            <LinkScroll
+          {/* <li><a href="/StudentForm">StudentForm</a></li> */}
+
+            {/* <LinkScroll
               activeClass="active"
-              to="about"
+              to="studentForm"
               spy={true}
               smooth={true}
               duration={1000}
               onSetActive={() => {
-                setActiveLink("about");
+                setActiveLink("studentForm");
               }}
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                (activeLink === "about"
+                (activeLink === "studentForm"
                   ? " text-orange-500 animation-active "
                   : " text-black-500 hover:text-orange-500 a")
               }
             >
-              About
-            </LinkScroll>
-            <LinkScroll
+              StudentForm
+            </LinkScroll> */}
+            {/* <LinkScroll
               activeClass="active"
               to="feature"
               spy={true}
@@ -61,8 +75,8 @@ const Header = () => {
               }
             >
               Feature
-            </LinkScroll>
-            <LinkScroll
+            </LinkScroll> */}
+            {/* <LinkScroll
               activeClass="active"
               to="pricing"
               spy={true}
@@ -79,7 +93,7 @@ const Header = () => {
               }
             >
               Pricing
-            </LinkScroll>
+            </LinkScroll> */}
             <LinkScroll
               activeClass="active"
               to="testimoni"

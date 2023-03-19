@@ -4,13 +4,15 @@ import Facebook from "../../public/assets/Icon/facebook.svg";
 import Twitter from "../../public/assets/Icon/twitter.svg";
 import Instagram from "../../public/assets/Icon/instagram.svg";
 import ButtonPrimary from "../misc/ButtonPrimary";
+import Image from "next/image";
+
 
 const Footer = () => {
   return (
     <div className="bg-white-300 pt-2 pb-24">
       <div className="max-w-screen-xl w-full mx-auto px-6 sm:px-8 lg:px-16 grid grid-rows-6 sm:grid-rows-1 grid-flow-row sm:grid-flow-col grid-cols-3 sm:grid-cols-12 gap-4">
         <div className="row-span-2 sm:col-span-4 col-start-1 col-end-4 sm:col-end-5 flex flex-col items-start ">
-          <LogoVPN className="h-8 w-auto mb-6" />
+        <Image src="/assets/logo.png" className="w-auto" width={150} height={50}/>
           <p className="mb-4 font-medium">Our System has unique features and has high security. Feel free to <strong>contact us!</strong> 
           </p>
           <div className="flex w-full mt-2 mb-8 -mx-2">
