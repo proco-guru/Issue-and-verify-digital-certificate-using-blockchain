@@ -124,7 +124,7 @@ const Testimoni = ({
           </div>
         ))}
       </Slider>
-      <div className="flex w-full items-center justify-end">
+      {/* <div className="flex w-full items-center justify-end">
         <div className="flex flex-none justify-between w-auto mt-14">
           <div
             className="mx-4 flex items-center justify-center h-14 w-14 rounded-full bg-white text-black-600 border hover:text-black-600  transition-all text-orange-500 cursor-pointer"
@@ -139,7 +139,7 @@ const Testimoni = ({
             <ArrowNext className="h-6 w-6" />
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

@@ -5,9 +5,8 @@ import { Link as LinkScroll } from "react-scroll";
 import ButtonOutline from "../misc/ButtonOutline.";
 // import LogoVPN from "../../public/assets/Logo.svg";
 import Image from "next/image";
-import StudentForm from "../Student/StudentForm";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
+// import StudentForm from "../Student/StudentForm";
+// import VerifierForm from "../Verifier/VerifierForm";
 
 
 const Header = () => {
@@ -23,17 +22,11 @@ const Header = () => {
       <header
         className={
           "fixed top-0 w-full  z-30 bg-white-500 transition-all " +
-          (scrollActive ? " shadow-md pt-0" : " pt-4")
+          (scrollActive ? " shadow-md pt-0" : " pt-0")
         }
       >
-        {/* <BrowserRouter>
-        <Switch>
-          <Route path="/StudentForm">
-            <StudentForm />
-          </Route>
-          </Switch>
-      </BrowserRouter> */}
-        <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
+       
+        <nav className="max-w-screen-xl px-6 sm:px-8 pt-1 lg:px-10 mx-auto grid grid-flow-col py-3 sm:py-2">
           <div className="col-start-1 col-end-2 flex items-center">
             <Image src="/assets/logo.png" className="w-auto" width={150} height={50}/>
           </div>
@@ -94,27 +87,35 @@ const Header = () => {
             >
               Pricing
             </LinkScroll> */}
-            <LinkScroll
-              activeClass="active"
-              to="testimoni"
-              spy={true}
-              smooth={true}
-              duration={1000}
-              onSetActive={() => {
-                setActiveLink("testimoni");
-              }}
-              className={
-                "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                (activeLink === "testimoni"
+            
+            <Link href="/">
+              <a  className={
+                "px-4 py-2 mx-2 cursor-pointer scroll-smooth animation-hover inline-block relative" +
+                (activeLink === "Home"
                   ? " text-orange-500 animation-active "
-                  : " text-black-500 hover:text-orange-500 ")
-              }
-            >
-              Testimonial
-            </LinkScroll>
+                  : " text-black-500 hover:text-orange-500 a")
+              }>
+                  Home
+              </a>
+            </Link>
             <Link href="/studentPage">
-              <a className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-orange-500 transition-all">
+              <a  className={
+                "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
+                (activeLink === "studentForm"
+                  ? " text-orange-500 animation-active "
+                  : " text-black-500 hover:text-orange-500 a")
+              }>
                   Student Page
+              </a>
+            </Link>
+            <Link href="/verifierPage">
+              <a  className={
+                "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
+                (activeLink === "VerifierPage"
+                  ? " text-orange-500 animation-active "
+                  : " text-black-500 hover:text-orange-500 a")
+              }>
+                  Verify Certificate
               </a>
             </Link>
           </ul>

@@ -31,7 +31,8 @@ const Pricing = () => {
               variants={scrollAnimation}
               className="leading-normal w-10/12 sm:w-7/12 lg:w-6/12 mx-auto my-2 text-center"
             >
-              Let's choose the package that is best for you and explore it happily
+              You will find more package features, that are help to build trust!
+              Let's give it try on the package that is best for you and explore it happily
               and cheerfully.
             </motion.p>
           </ScrollAnimationWrapper>

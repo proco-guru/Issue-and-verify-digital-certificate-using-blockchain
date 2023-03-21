@@ -1,13 +1,15 @@
-import React from "react";
-import LogoVPN from "../../public/assets/Logo.svg";
-import Facebook from "../../public/assets/Icon/facebook.svg";
-import Twitter from "../../public/assets/Icon/twitter.svg";
-import Instagram from "../../public/assets/Icon/instagram.svg";
+// import React from "react";
 import ButtonPrimary from "../misc/ButtonPrimary";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import React, { useMemo } from "react";
+import getScrollAnimation from "../../utils/getScrollAnimation";
+import ScrollAnimationWrapper from "../Layout/ScrollAnimationWrapper";
 
 
 const Footer = () => {
+  const scrollAnimation = useMemo(() => getScrollAnimation(), []);
+
   return (
     <div className="bg-white-300 pt-2 pb-24">
       <div className="max-w-screen-xl w-full mx-auto px-6 sm:px-8 lg:px-16 grid grid-rows-6 sm:grid-rows-1 grid-flow-row sm:grid-flow-col grid-cols-3 sm:grid-cols-12 gap-4">
@@ -16,20 +18,23 @@ const Footer = () => {
           <p className="mb-4 font-medium">Our System has unique features and has high security. Feel free to <strong>contact us!</strong> 
           </p>
           <div className="flex w-full mt-2 mb-8 -mx-2">
-            <div className="mx-2 bg-white-500 rounded-full items-center justify-center flex p-2 shadow-md">
-              <Facebook className="h-6 w-6" />
-            </div>
-            <div className="mx-2 bg-white-500 rounded-full items-center justify-center flex p-2 shadow-md">
-              <Twitter className="h-6 w-6" />
-            </div>
-            <div className="mx-2 bg-white-500 rounded-full items-center justify-center flex p-2 shadow-md">
-              <Instagram className="h-6 w-6" />
-            </div>
+          <ScrollAnimationWrapper className="flex w-full justify-end">
+                <motion.div className="h-full w-full p-1" variants={scrollAnimation}>
+            <Image
+              src="/assets/socialContact.gif"
+              alt="VPN Illustrasi"
+              layout="responsive"
+              quality={100}
+              height={480}
+              width={508}
+            />
+         </motion.div>
+        </ScrollAnimationWrapper>
           </div>
           <p className="text-gray-400">©{new Date().getFullYear()} - DVAN</p>
         </div>
       
-        <div className="row-span-2 sm:col-span-7 sm:col-start-5 sm:col-end-20 flex flex-col">
+        <div className="mt-16 row-span-2 sm:col-span-7 sm:col-start-5 sm:col-end-20 flex flex-col">
           {/* <p className="text-black-600 mb-4 font-medium text-lg">Engage</p>
           <ul className="text-black-500">
             <li className="my-2 hover:text-orange-500 cursor-pointer transition-all">
@@ -84,7 +89,7 @@ const Footer = () => {
                 <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
                 <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (123-456-7890)</label>
             </div>
-            <div class="relative z-0 w-full mb-6 group">
+            <div class="relative z-0 w-full mb-16 group">
                 <textarea name="message" id="message"  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
                 <label for="message" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Message for Us</label>
             </div>
